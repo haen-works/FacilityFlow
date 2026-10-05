@@ -361,3 +361,11 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# FacilityFlow local development files
+appsettings.Development.json
+
+# Local SQLite database
+*.db
+*.db-shm
+*.db-wal
