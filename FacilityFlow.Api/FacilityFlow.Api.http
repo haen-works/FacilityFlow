@@ -1,0 +1,56 @@
+POST https://localhost:7074/api/faultreports
+Content-Type: application/json
+
+{
+  "title": "Asansör çalışmıyor",
+  "description": "Asansör çağrı düğmesine basıldığında gelmiyor.",
+  "location": "A Blok, giriş katı"
+}
+
+### Yeni arıza oluştur
+POST https://localhost:7074/api/faultreports
+Content-Type: application/json
+
+{
+  "title": "Koridor lambası yanmıyor",
+  "description": "İkinci kattaki koridor karanlık.",
+  "location": "A Blok, 2. kat",
+  "priority": "Medium",
+  "reportedById": 1
+}
+
+### Arıza durumunu güncelle
+PATCH https://localhost:7074/api/faultreports/1/status
+Content-Type: application/json
+
+{
+  "status" : "InProgress"
+}
+
+### Kullanıcı oluştur
+POST https://localhost:7074/api/users
+Content-Type:application/json
+
+{
+  "fullName": "Fatih Han Sarıkaya",
+  "email": "fatih@example.com",
+  "role":"Employee"
+}
+
+### Teknik personel oluştur
+POST https://localhost:7074/api/users
+Content-Type: application/json
+
+{
+  "fullName": "Ali Yılmaz",
+  "email": "ali@example.com",
+  "role": "Technician"
+}
+
+### Arızayı teknik personele ata
+PATCH https://localhost:7074/api/faultreports/5/assignment
+Content-Type: application/json
+
+{
+  "technicianId": 2
+}

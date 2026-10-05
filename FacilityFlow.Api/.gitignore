@@ -1,0 +1,22 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build çıktıları
+bin/
+obj/
+
+# Local veritabanı dosyaları
+*.db
+*.db-shm
+*.db-wal
+
+# Local development ayarları
+appsettings.Development.json
+
+# Log dosyaları
+*.log
+
+# Test çıktıları
+TestResults/
